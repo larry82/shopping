@@ -1,0 +1,15 @@
+<div class="row">
+	<div class="col-md-10 col-md-offset-1 text-right">
+		<%= link_to "返回", :back, {class:"btn btn-default"} %>
+	</div>
+	<div class="col-md-6 col-md-offset-3" style="margin-bottom:30px;margin-top: 20px;">
+
+		已經存在的分類：
+		<% Category.all.order(:id).each do |c| %>
+			<button class="btn btn-default"><%= c.name %></button>
+		<% end %>
+	</div>
+	<div class="col-md-6 col-md-offset-3">
+		<%= render 'form' %>
+	</div>
+</div>

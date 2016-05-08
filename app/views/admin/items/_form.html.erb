@@ -1,0 +1,15 @@
+<%= simple_form_for [:admin, @item] do |f| %>
+
+	<%= f.input :name, label:"商品名稱", hint: '顧客會看到的商品標題' %>
+	<%= f.input :price, label:"商品價格", hint: '新台幣', input_html: { min: '0'} %>
+	<%= f.input :category_id, label:"商品種類", collection: Category.all %>
+	<%= link_to "新增種類", new_admin_category_path,class:"btn btn-default" %>
+	<br><br>
+	<%= f.input :number, label:"存貨數量", input_html: { min: '0'} %>
+	<%= f.input :description, label:"商品說明", input_html: { rows: 10} %>
+	
+	<div class="text-center">
+		<%= f.button :submit, "確認" %>
+	</div>
+	
+<% end %>

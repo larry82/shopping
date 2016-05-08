@@ -1,0 +1,43 @@
+#item-card{
+	background-color: white;
+	overflow: hidden;
+	text-align:center;
+	img{width:100%;}
+	.info{
+		padding: 5px 15px;
+		
+		.title{ 
+			font-size:16px;
+			padding: 2px 0; 
+		}
+		.description{
+			color: $text-secondary;
+			padding: 2px 0;
+		}
+		.price{
+			color: $primary;
+			padding: 2px 0;
+		}
+	}
+}
+
+#side-nav{
+	border-radius: 2px;
+	padding: 15px 25px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border: 1px solid $border;
+	min-height: 400px;
+	.category{
+		margin: 15px 0 ;
+	}
+	.title{
+		font-size: 16px;
+	}
+	.current{
+		color:$primary;
+	}
+	.border{
+		border-top: 1px solid $border;
+	}
+}

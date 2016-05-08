@@ -1,0 +1,48 @@
+<div class="row">
+	<div class="col-md-10 col-md-offset-1 text-right" style="margin-top:20px;">
+		<%= link_to "新增", {action:"new"}, {class:"btn btn-default"} %>
+	</div>
+
+	<div class="col-md-10 col-md-offset-1" style="margin-top:40px;">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>編號</th>
+					<th>名稱</th>
+					<th>價格</th>
+					<th>數量</th>
+					<th>種類</th>
+					<th>說明</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @items.each do |i| %>
+					<tr>
+						<td><%= i.id %><br></td>
+						<td><%= i.name %></td>
+						<td><%= i.price.to_s+" $" %></td>
+						<td><%= i.number %></td>
+						<td><%= i.category.name %></td>
+						<td>
+							<% simple_format(i.description) %>
+							<%= i.description.first(15)+"..." %>
+						</td>
+						<td>
+							<%= link_to "編輯", edit_admin_item_path(i),class:"btn btn-success" %>
+							<%= link_to "刪除", [:admin,i] ,method: "delete",data: { confirm:"確定要刪除「 #{i.name} 」 嗎？"}, class:"btn btn-danger" %>
+						</td>
+						
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="col-md-12">
+		
+	</div>
+	<div class="col-md-12">
+		
+	</div>
+</div>

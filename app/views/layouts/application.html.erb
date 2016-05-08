@@ -8,7 +8,8 @@
 </head>
 <body>
 
-<%= render 'navbar' %>
+  <% render 'navbar' unless params[:controller] == "welcome" %>
+  <%= render 'navbar_admin' if params[:controller] == "welcome" %>
 <div class="container">
   <%= render 'flash_message' %>
   <%= yield %>

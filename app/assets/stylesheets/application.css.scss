@@ -1,7 +1,20 @@
-/*
- *= require_tree .
- *= require_self
- */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+$primary: #e74c3c;
+$text: #11151c;
+$text-secondary: rgba(17,21,28,0.4);
+$border: rgba(17,21,28,0.2);
+
+
+body{
+	letter-spacing:1px;
+	// background-color: #f4f4f4;
+	color:$text;
+	font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", sans-serif;
+}
+
+@import "items";
+@import "categories";
+@import "welcome";

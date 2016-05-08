@@ -1,0 +1,21 @@
+<div id="side-nav">
+		<div class="category title">
+			商品分類
+		</div>
+	<% @categories.each do |c| %>
+		<div class="category">
+			<%= c.name %>
+		</div>
+	<% end %>
+		<div class="category current">
+			名牌服飾
+		</div>
+		<div class="category">
+			火星塞
+		</div>
+		<div class="category">
+			旅店老闆
+		</div>
+		<div class="border category">&nbsp</div>
+	
+</div>

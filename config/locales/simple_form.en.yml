@@ -2,6 +2,12 @@ en:
   simple_form:
     "yes": 'Yes'
     "no": 'No'
+
+  errors:
+    messages:
+      blank: "不能為空白"
+      invalid: "isn't valid" 
+
     required:
       text: 'required'
       mark: '*'
@@ -9,7 +15,7 @@ en:
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
     error_notification:
-      default_message: "Please review the problems below:"
+      default_message: "嗚，出錯了！"
     # Examples
     # labels:
     #   defaults:
